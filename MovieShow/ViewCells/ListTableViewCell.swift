@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import WebKit
 
 class ListTableViewCell: UITableViewCell {
     
     // 海報圖片
-    @IBOutlet weak var movieImage: UIImageView!
+    @IBOutlet weak var movieYoutubeView: WKWebView!
     
     // 標題
     @IBOutlet weak var movieTitle: UILabel!
@@ -21,4 +22,7 @@ class ListTableViewCell: UITableViewCell {
     
     // 片長
     @IBOutlet weak var movieRuntime: UILabel!
+    
+    // 上映日
+    @IBOutlet weak var movieOpenDate: UILabel!
 }

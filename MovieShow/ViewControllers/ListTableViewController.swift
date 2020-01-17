@@ -129,10 +129,20 @@ class ListTableViewController: UITableViewController {
             cell.movieRuntime.text = "片長: \(hour) 時 \(min) 分"
         }
         
-        // 海報圖片
-        if let img_url = movie["img_url"] {
-            if let url = URL(string: img_url) {
-                cell.movieImage.sd_setImage(with: url, placeholderImage: nil, options: .allowInvalidSSLCertificates, context: nil)
+        // 上映日
+        cell.movieOpenDate.text = "無上映日資料"
+        if let open_date = movie["open_date"] {
+            cell.movieOpenDate.text = open_date
+        }
+        
+        // 預告片
+        // 強制放在主執行緒
+        DispatchQueue.main.async {
+            if let youtube_url = movie["youtube_url"] {
+                if let youtube = URL(string: youtube_url) {
+                    let request = URLRequest(url: youtube)
+                    cell.movieYoutubeView.load(request)
+                }
             }
         }
         
