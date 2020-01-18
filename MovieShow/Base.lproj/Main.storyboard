@@ -9,13 +9,13 @@
         <!--本期首輪-->
         <scene sceneID="yCf-cd-xCU">
             <objects>
-                <tableViewController id="RaG-MF-omq" customClass="ListTableViewController" customModule="本周首輪片" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="RaG-MF-omq" customClass="ListTableViewController" customModule="電影情報" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tND-IQ-egU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="movieCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="319" id="yB7-nm-eEo" customClass="ListTableViewCell" customModule="本周首輪片" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="movieCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="319" id="yB7-nm-eEo" customClass="ListTableViewCell" customModule="電影情報" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="319"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yB7-nm-eEo" id="EAa-AS-Jce">
@@ -118,18 +118,18 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CcJ-aj-NG7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2590" y="-40"/>
+            <point key="canvasLocation" x="2497" y="-341"/>
         </scene>
         <!--近期上映-->
         <scene sceneID="39F-Yx-trm">
             <objects>
-                <tableViewController id="O6a-Zu-bIw" customClass="ListUnopenTableViewController" customModule="本周首輪片" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="O6a-Zu-bIw" customClass="ListUnopenTableViewController" customModule="電影情報" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="258-HE-Ztt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="movieCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="319" id="p2E-tk-D3F" customClass="ListTableViewCell" customModule="本周首輪片" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="movieCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="319" id="p2E-tk-D3F" customClass="ListTableViewCell" customModule="電影情報" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="319"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p2E-tk-D3F" id="6ce-yD-Zmo">
@@ -232,7 +232,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YR8-EG-by0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2590" y="696"/>
+            <point key="canvasLocation" x="2496" y="322"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PhW-KA-h8v">
@@ -251,7 +251,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UH9-3f-aM0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="975" y="-40"/>
+            <point key="canvasLocation" x="984" y="-40"/>
         </scene>
         <!--電影情報-->
         <scene sceneID="EEr-7D-PsO">
@@ -260,6 +260,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="電影情報" id="B5P-jq-mSW"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iBv-h3-OmD">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
