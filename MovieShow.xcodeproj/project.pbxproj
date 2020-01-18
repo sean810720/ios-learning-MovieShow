@@ -15,13 +15,14 @@
 		5A6CD90A23D0546500FA6D38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A6CD90923D0546500FA6D38 /* Assets.xcassets */; };
 		5A6CD90D23D0546500FA6D38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6CD90B23D0546500FA6D38 /* LaunchScreen.storyboard */; };
 		5A6CD91523D0587300FA6D38 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CD91423D0587300FA6D38 /* ListTableViewController.swift */; };
+		5AF00D2C23D3471200649BC2 /* ListUnopenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF00D2B23D3471200649BC2 /* ListUnopenTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		09B7794C3D3EFECA67B9E616 /* Pods_MovieShow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieShow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12D7D1BE9CBBEE5F1915AC38 /* Pods-MovieShow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieShow.release.xcconfig"; path = "Target Support Files/Pods-MovieShow/Pods-MovieShow.release.xcconfig"; sourceTree = "<group>"; };
 		5A004ADC23D15BE600588FC9 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
-		5A6CD8FD23D0546400FA6D38 /* 本周首輪片.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "本周首輪片.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A6CD8FD23D0546400FA6D38 /* 電影情報.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "電影情報.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A6CD90023D0546400FA6D38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A6CD90223D0546400FA6D38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5A6CD90723D0546400FA6D38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -29,6 +30,7 @@
 		5A6CD90C23D0546500FA6D38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A6CD90E23D0546500FA6D38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A6CD91423D0587300FA6D38 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		5AF00D2B23D3471200649BC2 /* ListUnopenTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListUnopenTableViewController.swift; sourceTree = "<group>"; };
 		A483EE1DCDE691116A6CC216 /* Pods-MovieShow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieShow.debug.xcconfig"; path = "Target Support Files/Pods-MovieShow/Pods-MovieShow.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,7 +59,7 @@
 		5A6CD8FE23D0546400FA6D38 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5A6CD8FD23D0546400FA6D38 /* 本周首輪片.app */,
+				5A6CD8FD23D0546400FA6D38 /* 電影情報.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				5A6CD91423D0587300FA6D38 /* ListTableViewController.swift */,
+				5AF00D2B23D3471200649BC2 /* ListUnopenTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -129,7 +132,7 @@
 			);
 			name = MovieShow;
 			productName = MovieShow;
-			productReference = 5A6CD8FD23D0546400FA6D38 /* 本周首輪片.app */;
+			productReference = 5A6CD8FD23D0546400FA6D38 /* 電影情報.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -229,6 +232,7 @@
 				5A004ADD23D15BE600588FC9 /* ListTableViewCell.swift in Sources */,
 				5A6CD90323D0546400FA6D38 /* SceneDelegate.swift in Sources */,
 				5A6CD91523D0587300FA6D38 /* ListTableViewController.swift in Sources */,
+				5AF00D2C23D3471200649BC2 /* ListUnopenTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +308,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -358,7 +362,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -382,7 +386,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Sean.MovieShow;
-				PRODUCT_NAME = "本周首輪片";
+				PRODUCT_NAME = "電影情報";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -402,7 +406,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Sean.MovieShow;
-				PRODUCT_NAME = "本周首輪片";
+				PRODUCT_NAME = "電影情報";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

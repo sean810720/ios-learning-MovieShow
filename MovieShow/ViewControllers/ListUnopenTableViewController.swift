@@ -9,13 +9,13 @@
 import UIKit
 import SDWebImage
 
-class ListTableViewController: UITableViewController {
+class ListUnopenTableViewController: UITableViewController {
     
     // 標題
-    var appTitle = "本期首輪"
+    var appTitle = "近期上映"
     
     // 電影資料 API
-    var movieDataUrl = "https://movieshowapp-3def6.firebaseio.com/MovieData.json"
+    var movieDataUrl = "https://movieshowapp-3def6.firebaseio.com/MovieDataUnopen.json"
        
     // 電影資料
     var movieData = [[String: String]]()
