@@ -28,8 +28,10 @@ class ListUnopenTableViewController: UITableViewController {
         getMovieData()
     }
     
+    // MARK: - 自訂方法
+    
     // 下載電影資料
-    func getMovieData() {
+    private func getMovieData() {
         if let dataUrl = URL(string: movieDataUrl) {
             URLSession.shared.dataTask(with: dataUrl) { (data, response, error) in
                 
@@ -60,7 +62,9 @@ class ListUnopenTableViewController: UITableViewController {
             print("電影資料 API 未設定")
         }
     }
-
+    
+    // MARK: - 頁面載入時執行
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -70,6 +74,13 @@ class ListUnopenTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         title = appTitle
+        
+        // 下載電影資料
+        getMovieData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         
         // 下載電影資料
         getMovieData()
