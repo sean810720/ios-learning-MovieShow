@@ -97,7 +97,7 @@ class ListTableViewController: UITableViewController {
         }
         
         // IMDB 評分 - 用星星表示
-        cell.movieImdbRating.text = "無評分資料"
+        cell.movieImdbRating.text = "☆"
         if let imdbRating = movie["imdb_rating"] {
             
             if imdbRating.count > 0 {
@@ -130,9 +130,9 @@ class ListTableViewController: UITableViewController {
         }
         
         // 上映日
-        cell.movieOpenDate.text = "無上映日資料"
+        cell.movieOpenDate.text = "上映日: 無資料"
         if let open_date = movie["open_date"] {
-            cell.movieOpenDate.text = open_date
+            cell.movieOpenDate.text = "上映日: \(open_date)"
         }
         
         // 預告片
