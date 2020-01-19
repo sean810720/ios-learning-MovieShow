@@ -155,11 +155,15 @@ class ListTableViewController: UITableViewController {
             }
         }
         
-        // 預告片
-        if let youtube_url = movie["youtube_url"] {
-            if let range = youtube_url.range(of: "https://www.youtube.com/embed/") {
-                let youtube_id = youtube_url[range.upperBound...].trimmingCharacters(in: .whitespaces)
-                cell.youtubeView.load(withVideoId: youtube_id, playerVars: ["playsinline":1])
+        // 強制放在主執行緒
+        DispatchQueue.main.async {
+            
+            // 預告片
+            if let youtube_url = movie["youtube_url"] {
+                if let range = youtube_url.range(of: "https://www.youtube.com/embed/") {
+                    let youtube_id = youtube_url[range.upperBound...].trimmingCharacters(in: .whitespaces)
+                    cell.youtubeView.load(withVideoId: youtube_id, playerVars: ["playsinline":1])
+                }
             }
         }
         
