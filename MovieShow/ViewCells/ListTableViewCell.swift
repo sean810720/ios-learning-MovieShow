@@ -11,7 +11,7 @@ import WebKit
 
 class ListTableViewCell: UITableViewCell {
     
-    // 海報圖片
+    // Youtube 預告片
     @IBOutlet weak var movieYoutubeView: WKWebView!
     
     // 標題

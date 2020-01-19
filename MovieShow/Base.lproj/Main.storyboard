@@ -38,7 +38,7 @@
                                                 <constraint firstAttribute="width" constant="414" id="Fw6-Rg-JoK"/>
                                                 <constraint firstAttribute="height" constant="230" id="wd6-5V-V0P"/>
                                             </constraints>
-                                            <wkWebViewConfiguration key="configuration">
+                                            <wkWebViewConfiguration key="configuration" allowsInlineMediaPlayback="YES">
                                                 <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                                 <wkPreferences key="preferences"/>
                                             </wkWebViewConfiguration>
@@ -152,7 +152,7 @@
                                                 <constraint firstAttribute="width" constant="414" id="eTC-o9-dux"/>
                                                 <constraint firstAttribute="height" constant="230" id="ii1-h5-tc6"/>
                                             </constraints>
-                                            <wkWebViewConfiguration key="configuration">
+                                            <wkWebViewConfiguration key="configuration" allowsInlineMediaPlayback="YES">
                                                 <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                                 <wkPreferences key="preferences"/>
                                             </wkWebViewConfiguration>

@@ -78,13 +78,6 @@ class ListUnopenTableViewController: UITableViewController {
         // 下載電影資料
         getMovieData()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        
-        // 下載電影資料
-        getMovieData()
-    }
 
     // MARK: - Table view data source
 
@@ -156,13 +149,10 @@ class ListUnopenTableViewController: UITableViewController {
         }
         
         // 預告片
-        // 強制放在主執行緒
-        DispatchQueue.main.async {
-            if let youtube_url = movie["youtube_url"] {
-                if let youtube = URL(string: youtube_url) {
-                    let request = URLRequest(url: youtube)
-                    cell.movieYoutubeView.load(request)
-                }
+        if let youtube_url = movie["youtube_url"] {
+            if let youtube = URL(string: "\(youtube_url)?playsinline=1") {
+                let request = URLRequest(url: youtube, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 1.0)
+                cell.movieYoutubeView.load(request)
             }
         }
         
