@@ -78,13 +78,6 @@ class ListTableViewController: UITableViewController {
         // 下載電影資料
         getMovieData()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        
-        // 下載電影資料
-        getMovieData()
-    }
 
     // MARK: - Table view data source
 
