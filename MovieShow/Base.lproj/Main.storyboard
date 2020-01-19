@@ -31,18 +31,6 @@
                                             <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fOJ-v0-LtA">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
-                                            <color key="backgroundColor" red="0.36078431372549019" green="0.38823529411764707" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="414" id="Fw6-Rg-JoK"/>
-                                                <constraint firstAttribute="height" constant="230" id="wd6-5V-V0P"/>
-                                            </constraints>
-                                            <wkWebViewConfiguration key="configuration" allowsInlineMediaPlayback="YES">
-                                                <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                                <wkPreferences key="preferences"/>
-                                            </wkWebViewConfiguration>
-                                        </wkWebView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上映日: YYYY/MM/DD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1l-oj-Qbh">
                                             <rect key="frame" x="20" y="286" width="133" height="16"/>
                                             <constraints>
@@ -67,25 +55,32 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckL-JS-UIr" userLabel="YoutubeView" customClass="YTPlayerView">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
+                                            <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="414" id="MvH-ik-34L"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="fOJ-v0-LtA" firstAttribute="leading" secondItem="EAa-AS-Jce" secondAttribute="leadingMargin" constant="-20" id="3vY-09-ths"/>
-                                        <constraint firstItem="GoO-04-LY4" firstAttribute="top" secondItem="fOJ-v0-LtA" secondAttribute="bottom" constant="8" id="7pf-gl-Uxm"/>
+                                        <constraint firstItem="GoO-04-LY4" firstAttribute="top" secondItem="ckL-JS-UIr" secondAttribute="bottom" constant="8" id="3EO-Xh-tcW"/>
                                         <constraint firstItem="P1l-oj-Qbh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Q5u-xT-WQo" secondAttribute="leading" id="8IH-s8-7E6"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="3OR-Mb-XyM" secondAttribute="bottom" constant="5" id="FgL-G3-RhV"/>
                                         <constraint firstItem="GoO-04-LY4" firstAttribute="leading" secondItem="EAa-AS-Jce" secondAttribute="leadingMargin" id="GN5-6i-7m3"/>
+                                        <constraint firstItem="ckL-JS-UIr" firstAttribute="centerX" secondItem="EAa-AS-Jce" secondAttribute="centerX" id="HUr-M4-khs"/>
+                                        <constraint firstItem="ckL-JS-UIr" firstAttribute="leading" secondItem="EAa-AS-Jce" secondAttribute="leadingMargin" constant="-20" id="Ily-0u-8aj"/>
                                         <constraint firstItem="Q5u-xT-WQo" firstAttribute="top" secondItem="GoO-04-LY4" secondAttribute="bottom" constant="8" id="Jhq-TP-uBW"/>
                                         <constraint firstItem="Q5u-xT-WQo" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GoO-04-LY4" secondAttribute="trailing" id="KVj-jT-hmg"/>
-                                        <constraint firstItem="Q5u-xT-WQo" firstAttribute="centerX" secondItem="fOJ-v0-LtA" secondAttribute="centerX" id="Lar-H5-ivC"/>
                                         <constraint firstItem="3OR-Mb-XyM" firstAttribute="leading" secondItem="P1l-oj-Qbh" secondAttribute="trailing" constant="8" id="Mjt-fC-07K"/>
                                         <constraint firstItem="Q5u-xT-WQo" firstAttribute="top" secondItem="EAa-AS-Jce" secondAttribute="top" constant="263" id="SPK-Gz-xtk"/>
                                         <constraint firstItem="P1l-oj-Qbh" firstAttribute="firstBaseline" secondItem="3OR-Mb-XyM" secondAttribute="firstBaseline" id="TcC-Ij-DNy"/>
+                                        <constraint firstItem="ckL-JS-UIr" firstAttribute="top" secondItem="EAa-AS-Jce" secondAttribute="topMargin" constant="-11" id="bU9-db-xGL"/>
                                         <constraint firstItem="3OR-Mb-XyM" firstAttribute="firstBaseline" secondItem="P1l-oj-Qbh" secondAttribute="baseline" id="dlC-9T-fjE"/>
                                         <constraint firstItem="3OR-Mb-XyM" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Q5u-xT-WQo" secondAttribute="trailing" id="doV-Ot-Wit"/>
                                         <constraint firstItem="P1l-oj-Qbh" firstAttribute="leading" secondItem="GoO-04-LY4" secondAttribute="leading" id="fVO-Wr-p18"/>
-                                        <constraint firstItem="fOJ-v0-LtA" firstAttribute="top" secondItem="EAa-AS-Jce" secondAttribute="topMargin" constant="-11" id="qrH-dF-v0f"/>
+                                        <constraint firstItem="ckL-JS-UIr" firstAttribute="centerX" secondItem="Q5u-xT-WQo" secondAttribute="centerX" id="nEk-dt-m7o"/>
                                         <constraint firstItem="P1l-oj-Qbh" firstAttribute="top" secondItem="Q5u-xT-WQo" secondAttribute="bottom" constant="8" id="sRw-x4-aJX"/>
-                                        <constraint firstItem="fOJ-v0-LtA" firstAttribute="centerX" secondItem="EAa-AS-Jce" secondAttribute="centerX" id="sfH-Ky-avx"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -93,7 +88,7 @@
                                     <outlet property="movieOpenDate" destination="P1l-oj-Qbh" id="Amd-3d-mod"/>
                                     <outlet property="movieRuntime" destination="3OR-Mb-XyM" id="dmE-SA-rgC"/>
                                     <outlet property="movieTitle" destination="GoO-04-LY4" id="223-18-27j"/>
-                                    <outlet property="movieYoutubeView" destination="fOJ-v0-LtA" id="j4p-1G-kJM"/>
+                                    <outlet property="youtubeView" destination="ckL-JS-UIr" id="LiY-LB-dac"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -118,7 +113,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CcJ-aj-NG7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2497" y="-341"/>
+            <point key="canvasLocation" x="2494.202898550725" y="-341.51785714285711"/>
         </scene>
         <!--近期上映-->
         <scene sceneID="39F-Yx-trm">
@@ -145,18 +140,6 @@
                                             <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Cm-t2-azd">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
-                                            <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="414" id="eTC-o9-dux"/>
-                                                <constraint firstAttribute="height" constant="230" id="ii1-h5-tc6"/>
-                                            </constraints>
-                                            <wkWebViewConfiguration key="configuration" allowsInlineMediaPlayback="YES">
-                                                <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                                <wkPreferences key="preferences"/>
-                                            </wkWebViewConfiguration>
-                                        </wkWebView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上映日: YYYY/MM/DD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lq4-BY-vGW">
                                             <rect key="frame" x="20" y="286" width="133" height="16"/>
                                             <constraints>
@@ -181,25 +164,32 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WgV-EE-Yor" userLabel="YoutubeView" customClass="YTPlayerView">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
+                                            <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="414" id="SZi-xX-lR6"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Lq4-BY-vGW" firstAttribute="leading" secondItem="Zeh-1t-pYv" secondAttribute="leading" id="0K7-O3-3IN"/>
-                                        <constraint firstItem="Zeh-1t-pYv" firstAttribute="top" secondItem="5Cm-t2-azd" secondAttribute="bottom" constant="8" id="3Gp-In-wgq"/>
                                         <constraint firstItem="fF2-wG-Vis" firstAttribute="top" secondItem="Zeh-1t-pYv" secondAttribute="bottom" constant="8" id="Exr-1o-dUG"/>
-                                        <constraint firstItem="5Cm-t2-azd" firstAttribute="centerX" secondItem="6ce-yD-Zmo" secondAttribute="centerX" id="Fhk-0i-dKK"/>
-                                        <constraint firstItem="5Cm-t2-azd" firstAttribute="top" secondItem="6ce-yD-Zmo" secondAttribute="topMargin" constant="-11" id="HRh-SJ-PSh"/>
+                                        <constraint firstItem="WgV-EE-Yor" firstAttribute="centerX" secondItem="fF2-wG-Vis" secondAttribute="centerX" id="Jha-wO-cqN"/>
                                         <constraint firstItem="Lq4-BY-vGW" firstAttribute="firstBaseline" secondItem="vuG-ic-Mch" secondAttribute="firstBaseline" id="Kox-xC-Ybr"/>
+                                        <constraint firstItem="Zeh-1t-pYv" firstAttribute="top" secondItem="WgV-EE-Yor" secondAttribute="bottom" constant="8" id="MoU-SJ-NkP"/>
                                         <constraint firstItem="vuG-ic-Mch" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fF2-wG-Vis" secondAttribute="trailing" id="Nst-Gh-SGY"/>
                                         <constraint firstItem="vuG-ic-Mch" firstAttribute="leading" secondItem="Lq4-BY-vGW" secondAttribute="trailing" constant="8" id="PZf-3Z-9Fw"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="vuG-ic-Mch" secondAttribute="bottom" constant="5" id="TuA-qF-ZQj"/>
                                         <constraint firstItem="Lq4-BY-vGW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fF2-wG-Vis" secondAttribute="leading" id="V9j-cI-9oe"/>
-                                        <constraint firstItem="5Cm-t2-azd" firstAttribute="leading" secondItem="6ce-yD-Zmo" secondAttribute="leadingMargin" constant="-20" id="cjb-9R-VGr"/>
+                                        <constraint firstItem="WgV-EE-Yor" firstAttribute="leading" secondItem="6ce-yD-Zmo" secondAttribute="leadingMargin" constant="-20" id="YAo-hq-2bU"/>
                                         <constraint firstItem="Zeh-1t-pYv" firstAttribute="leading" secondItem="6ce-yD-Zmo" secondAttribute="leadingMargin" id="ide-9i-HoP"/>
-                                        <constraint firstItem="fF2-wG-Vis" firstAttribute="centerX" secondItem="5Cm-t2-azd" secondAttribute="centerX" id="lOn-2p-aF2"/>
                                         <constraint firstItem="fF2-wG-Vis" firstAttribute="top" secondItem="6ce-yD-Zmo" secondAttribute="top" constant="263" id="oSF-Rz-Wot"/>
+                                        <constraint firstItem="WgV-EE-Yor" firstAttribute="top" secondItem="6ce-yD-Zmo" secondAttribute="topMargin" constant="-11" id="rci-ez-Np0"/>
                                         <constraint firstItem="vuG-ic-Mch" firstAttribute="firstBaseline" secondItem="Lq4-BY-vGW" secondAttribute="baseline" id="seY-bM-mGz"/>
                                         <constraint firstItem="fF2-wG-Vis" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Zeh-1t-pYv" secondAttribute="trailing" id="v9Y-Cz-H7W"/>
                                         <constraint firstItem="Lq4-BY-vGW" firstAttribute="top" secondItem="fF2-wG-Vis" secondAttribute="bottom" constant="8" id="wSE-EA-Mu3"/>
+                                        <constraint firstItem="WgV-EE-Yor" firstAttribute="centerX" secondItem="6ce-yD-Zmo" secondAttribute="centerX" id="xYs-o8-364"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -207,7 +197,7 @@
                                     <outlet property="movieOpenDate" destination="Lq4-BY-vGW" id="tNu-oJ-7Kj"/>
                                     <outlet property="movieRuntime" destination="vuG-ic-Mch" id="c00-eH-VnO"/>
                                     <outlet property="movieTitle" destination="Zeh-1t-pYv" id="Aef-mP-HYD"/>
-                                    <outlet property="movieYoutubeView" destination="5Cm-t2-azd" id="Px7-nQ-sVQ"/>
+                                    <outlet property="youtubeView" destination="WgV-EE-Yor" id="7Nx-rX-vut"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -232,7 +222,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YR8-EG-by0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2496" y="322"/>
+            <point key="canvasLocation" x="2494.202898550725" y="320.75892857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PhW-KA-h8v">

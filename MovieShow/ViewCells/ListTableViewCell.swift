@@ -7,12 +7,12 @@
 //
 
 import UIKit
-import WebKit
+import youtube_ios_player_helper
 
 class ListTableViewCell: UITableViewCell {
     
     // Youtube 預告片
-    @IBOutlet weak var movieYoutubeView: WKWebView!
+    @IBOutlet weak var youtubeView: YTPlayerView!
     
     // 標題
     @IBOutlet weak var movieTitle: UILabel!

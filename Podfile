@@ -8,5 +8,6 @@ target 'MovieShow' do
   # Pods for MovieShow
   pod 'SVProgressHUD'
   pod 'SDWebImage'
+  pod "youtube-ios-player-helper", "~> 0.1.4"
 
 end

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SDWebImage
+import youtube_ios_player_helper
 
 class ListTableViewController: UITableViewController {
     
@@ -74,6 +74,13 @@ class ListTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         title = appTitle
+        
+        // 下載電影資料
+        getMovieData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         
         // 下載電影資料
         getMovieData()
@@ -150,12 +157,11 @@ class ListTableViewController: UITableViewController {
         
         // 預告片
         if let youtube_url = movie["youtube_url"] {
-            if let youtube = URL(string: "\(youtube_url)?playsinline=1") {
-                let request = URLRequest(url: youtube, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 1.0)
-                cell.movieYoutubeView.load(request)
+            if let range = youtube_url.range(of: "https://www.youtube.com/embed/") {
+                let youtube_id = youtube_url[range.upperBound...].trimmingCharacters(in: .whitespaces)
+                cell.youtubeView.load(withVideoId: youtube_id, playerVars: ["playsinline":1])
             }
         }
-        
         
         return cell
     }
