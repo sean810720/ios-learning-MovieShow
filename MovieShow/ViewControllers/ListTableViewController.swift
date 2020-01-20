@@ -155,7 +155,14 @@ class ListTableViewController: UITableViewController {
             if let youtube_url = movie["youtube_url"] {
                 if let range = youtube_url.range(of: "https://www.youtube.com/embed/") {
                     let youtube_id = youtube_url[range.upperBound...].trimmingCharacters(in: .whitespaces)
-                    cell.youtubeView.load(withVideoId: youtube_id, playerVars: ["playsinline":1])
+                    cell.youtubeView.load(withVideoId: youtube_id, playerVars: [
+                        "playsinline": 1,
+                        "theme": "dark",
+                        "color": "red",
+                        "autohide": 1,
+                        "showinfo": 0,
+                        "controls": 1
+                    ])
                 }
             }
         }
