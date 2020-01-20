@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import youtube_ios_player_helper
 
 class ListTableViewController: UITableViewController {
     
@@ -30,8 +29,23 @@ class ListTableViewController: UITableViewController {
     
     // MARK: - 自訂方法
     
+    // 頁面 loading 動畫
+    func showLoading() {
+        let alert = UIAlertController(title: nil, message: "頁面載入中", preferredStyle: .alert)
+        let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.style = UIActivityIndicatorView.Style.large
+        loadingIndicator.startAnimating();
+        alert.view.addSubview(loadingIndicator)
+        present(alert, animated: true, completion: nil)
+    }
+    
     // 下載電影資料
     private func getMovieData() {
+        
+        // 開啟頁面 loading 動畫
+        showLoading()
+        
         if let dataUrl = URL(string: movieDataUrl) {
             URLSession.shared.dataTask(with: dataUrl) { (data, response, error) in
                 
@@ -47,19 +61,28 @@ class ListTableViewController: UITableViewController {
                                 self.tableView.reloadData()
                                 print("頁面資料更新完成")
                                 
-                                self.ListRefresh.endRefreshing()
+                                // 關閉頁面 loading 動畫
+                                self.dismiss(animated: true) {
+                                    self.ListRefresh.endRefreshing()
+                                }
                             }
                         }
                     }
                     
                 } catch {
                     print("電影資料下載失敗")
+                    
+                    // 關閉頁面 loading 動畫
+                    self.dismiss(animated: false, completion: nil)
                 }
                 
             }.resume()
             
         } else {
             print("電影資料 API 未設定")
+            
+            // 關閉頁面 loading 動畫
+            dismiss(animated: false, completion: nil)
         }
     }
     
@@ -74,6 +97,13 @@ class ListTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         title = appTitle
+        
+        // 下載電影資料
+        getMovieData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         
         // 下載電影資料
         getMovieData()
@@ -160,8 +190,9 @@ class ListTableViewController: UITableViewController {
                         "theme": "dark",
                         "color": "red",
                         "autohide": 1,
-                        "showinfo": 0,
-                        "controls": 1
+                        "controls": 1,
+                        "rel": 0,
+                        "modestbranding": 1
                     ])
                 }
             }
