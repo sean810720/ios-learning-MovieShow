@@ -6,8 +6,6 @@ target 'MovieShow' do
   use_frameworks!
 
   # Pods for MovieShow
-  pod 'MBProgressHUD', '~> 1.2.0'
-  pod 'SDWebImage'
   pod "youtube-ios-player-helper", "~> 0.1.4"
 
 end
