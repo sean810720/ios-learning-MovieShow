@@ -42,7 +42,6 @@ class DetailViewController: UIViewController, WKUIDelegate {
     }
     
     
-    
     /*
     // MARK: - Navigation
 
@@ -52,5 +51,4 @@ class DetailViewController: UIViewController, WKUIDelegate {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

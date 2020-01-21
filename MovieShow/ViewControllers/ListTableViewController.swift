@@ -103,9 +103,6 @@ class ListTableViewController: UITableViewController {
         getMovieData()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-    }
 
     // MARK: - Table view data source
 
