@@ -11,6 +11,9 @@ import youtube_ios_player_helper
 
 class ListTableViewCell: UITableViewCell {
     
+    // 電影海報
+    @IBOutlet weak var movieImage: UIImageView!
+    
     // Youtube 預告片
     @IBOutlet weak var youtubeView: YTPlayerView!
     

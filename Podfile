@@ -7,5 +7,5 @@ target 'MovieShow' do
 
   # Pods for MovieShow
   pod "youtube-ios-player-helper", "~> 0.1.4"
-
+  pod 'SDWebImage', '~> 5.0'
 end

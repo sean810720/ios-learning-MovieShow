@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ListTableViewController: UITableViewController {
     
@@ -180,6 +181,13 @@ class ListTableViewController: UITableViewController {
         
         // 強制放在主執行緒
         DispatchQueue.main.async {
+            
+            // 電影海報
+            if let movie_img = movie["img_url"] {
+                if let movie_img_url = URL(string: movie_img) {
+                    cell.movieImage.sd_setImage(with: movie_img_url, placeholderImage: nil, options: .allowInvalidSSLCertificates, context: nil)
+                }
+            }
             
             // 預告片
             if let youtube_url = movie["youtube_url"] {
