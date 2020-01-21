@@ -31,7 +31,7 @@ class ListTableViewController: UITableViewController {
     // MARK: - 自訂方法
     
     // 頁面 loading 動畫
-    func showLoading() {
+    private func showLoading() {
         let alert = UIAlertController(title: nil, message: "頁面載入中", preferredStyle: .alert)
         let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
         loadingIndicator.hidesWhenStopped = true
