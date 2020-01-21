@@ -15,6 +15,7 @@
 		5A6CD90A23D0546500FA6D38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A6CD90923D0546500FA6D38 /* Assets.xcassets */; };
 		5A6CD90D23D0546500FA6D38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6CD90B23D0546500FA6D38 /* LaunchScreen.storyboard */; };
 		5A6CD91523D0587300FA6D38 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CD91423D0587300FA6D38 /* ListTableViewController.swift */; };
+		5AABF23423D6D94400E038C7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AABF23323D6D94400E038C7 /* DetailViewController.swift */; };
 		5AF00D2C23D3471200649BC2 /* ListUnopenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF00D2B23D3471200649BC2 /* ListUnopenTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		5A6CD90C23D0546500FA6D38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A6CD90E23D0546500FA6D38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A6CD91423D0587300FA6D38 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		5AABF23323D6D94400E038C7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		5AF00D2B23D3471200649BC2 /* ListUnopenTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListUnopenTableViewController.swift; sourceTree = "<group>"; };
 		A483EE1DCDE691116A6CC216 /* Pods-MovieShow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieShow.debug.xcconfig"; path = "Target Support Files/Pods-MovieShow/Pods-MovieShow.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +86,7 @@
 			children = (
 				5A6CD91423D0587300FA6D38 /* ListTableViewController.swift */,
 				5AF00D2B23D3471200649BC2 /* ListUnopenTableViewController.swift */,
+				5AABF23323D6D94400E038C7 /* DetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				5A6CD90123D0546400FA6D38 /* AppDelegate.swift in Sources */,
 				5A004ADD23D15BE600588FC9 /* ListTableViewCell.swift in Sources */,
 				5A6CD90323D0546400FA6D38 /* SceneDelegate.swift in Sources */,
+				5AABF23423D6D94400E038C7 /* DetailViewController.swift in Sources */,
 				5A6CD91523D0587300FA6D38 /* ListTableViewController.swift in Sources */,
 				5AF00D2C23D3471200649BC2 /* ListUnopenTableViewController.swift in Sources */,
 			);

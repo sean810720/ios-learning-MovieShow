@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -89,6 +90,7 @@
                                     <outlet property="movieRuntime" destination="3OR-Mb-XyM" id="dmE-SA-rgC"/>
                                     <outlet property="movieTitle" destination="GoO-04-LY4" id="223-18-27j"/>
                                     <outlet property="youtubeView" destination="ckL-JS-UIr" id="LiY-LB-dac"/>
+                                    <segue destination="FpL-pB-qg2" kind="show" id="MX6-n6-GLj"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -114,6 +116,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CcJ-aj-NG7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2494.202898550725" y="-341.51785714285711"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="LLv-OM-NER">
+            <objects>
+                <viewController id="FpL-pB-qg2" customClass="DetailViewController" customModule="電影情報" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uV9-cU-zhi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="cyB-Qo-2RE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KCo-Kw-EGF">
+                        <barButtonItem key="backBarButtonItem" title="電影情報" id="0rk-Ia-2W1"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6kU-4S-6GJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3501" y="-62"/>
         </scene>
         <!--近期上映-->
         <scene sceneID="39F-Yx-trm">
@@ -198,6 +218,7 @@
                                     <outlet property="movieRuntime" destination="vuG-ic-Mch" id="c00-eH-VnO"/>
                                     <outlet property="movieTitle" destination="Zeh-1t-pYv" id="Aef-mP-HYD"/>
                                     <outlet property="youtubeView" destination="WgV-EE-Yor" id="7Nx-rX-vut"/>
+                                    <segue destination="FpL-pB-qg2" kind="show" id="ape-ce-Hgh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -241,7 +262,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UH9-3f-aM0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="984" y="-40"/>
+            <point key="canvasLocation" x="1022" y="-40"/>
         </scene>
         <!--電影情報-->
         <scene sceneID="EEr-7D-PsO">
@@ -269,4 +290,7 @@
         <image name="film.fill" catalog="system" width="64" height="46"/>
         <image name="play.rectangle.fill" catalog="system" width="64" height="46"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="MX6-n6-GLj"/>
+    </inferredMetricsTieBreakers>
 </document>

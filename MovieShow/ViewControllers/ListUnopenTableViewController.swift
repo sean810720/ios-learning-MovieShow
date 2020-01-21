@@ -105,8 +105,10 @@ class ListUnopenTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        // 下載電影資料
-        getMovieData()
+        // 強制放在主執行緒
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 
     // MARK: - Table view data source
@@ -193,7 +195,11 @@ class ListUnopenTableViewController: UITableViewController {
             // 預告片
             if let youtube_url = movie["youtube_url"] {
                 if let range = youtube_url.range(of: "https://www.youtube.com/embed/") {
+                    
+                    // 取出 Youtube ID
                     let youtube_id = youtube_url[range.upperBound...].trimmingCharacters(in: .whitespaces)
+                    
+                    // 載入 Youtube view
                     cell.youtubeView.load(withVideoId: youtube_id, playerVars: [
                         "playsinline": 1,
                         "theme": "dark",
@@ -245,14 +251,30 @@ class ListUnopenTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        // 設定目的地
+        if let destination = segue.destination as? DetailViewController {
+        
+            // 設定目的地資料內容
+            if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
+              
+                // 電影標題
+                if let title = self.movieData[indexPath.row]["title"] {
+                    destination.pageTitle = title
+                }
+                
+                // 電影介紹網址
+                if let url = self.movieData[indexPath.row]["url"] {
+                    destination.Url = url
+                }
+            }
+        }
     }
-    */
-
 }
