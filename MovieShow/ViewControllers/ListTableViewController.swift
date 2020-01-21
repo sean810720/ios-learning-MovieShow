@@ -186,6 +186,8 @@ class ListTableViewController: UITableViewController {
             if let movie_img = movie["img_url"] {
                 if let movie_img_url = URL(string: movie_img) {
                     cell.movieImage.sd_setImage(with: movie_img_url, placeholderImage: nil, options: .allowInvalidSSLCertificates, context: nil)
+                    cell.movieImage.layer.cornerRadius = 25
+                    cell.movieImage.layer.masksToBounds = true
                 }
             }
             
