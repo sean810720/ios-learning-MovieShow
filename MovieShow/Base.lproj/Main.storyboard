@@ -127,9 +127,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="cyB-Qo-2RE"/>
                     </view>
-                    <navigationItem key="navigationItem" id="KCo-Kw-EGF">
-                        <barButtonItem key="backBarButtonItem" title="電影情報" id="0rk-Ia-2W1"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="KCo-Kw-EGF"/>
+                    <connections>
+                        <outlet property="backNavigationItem" destination="KCo-Kw-EGF" id="Tli-1c-5gy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6kU-4S-6GJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -105,11 +105,6 @@ class ListTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
-        // 強制放在主執行緒
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
     }
 
     // MARK: - Table view data source

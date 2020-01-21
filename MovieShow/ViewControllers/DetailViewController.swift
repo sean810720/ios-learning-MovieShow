@@ -14,6 +14,10 @@ class DetailViewController: UIViewController, WKUIDelegate {
     var webView: WKWebView!
     var pageTitle: String!
     var Url: String!
+
+    @IBOutlet weak var backNavigationItem: UINavigationItem!
+    
+    // MARK: - 頁面載入時執行
     
     override func loadView() {
         let webConfiguration = WKWebViewConfiguration()
@@ -21,19 +25,24 @@ class DetailViewController: UIViewController, WKUIDelegate {
         webView.uiDelegate = self
         view = webView
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         title = pageTitle
         
+        if let backBarButtonItem = backNavigationItem.backBarButtonItem {
+            backBarButtonItem.title = "電影情報"
+        }
+        
         let myURL = URL(string: Url)
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)
     }
     
-
+    
+    
     /*
     // MARK: - Navigation
 
