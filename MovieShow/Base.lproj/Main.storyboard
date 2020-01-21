@@ -134,7 +134,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6kU-4S-6GJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3501" y="-62"/>
+            <point key="canvasLocation" x="3267" y="-40"/>
         </scene>
         <!--近期上映-->
         <scene sceneID="39F-Yx-trm">
