@@ -66,6 +66,7 @@
                                             </constraints>
                                         </imageView>
                                     </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
                                         <constraint firstItem="3OR-Mb-XyM" firstAttribute="trailing" secondItem="Q5u-xT-WQo" secondAttribute="trailing" id="ATf-2C-2XC"/>
                                         <constraint firstItem="jba-2n-qwe" firstAttribute="leading" secondItem="EAa-AS-Jce" secondAttribute="leadingMargin" constant="-15" id="ETR-Xm-yR9"/>
@@ -195,6 +196,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
                                         <constraint firstItem="Lq4-BY-vGW" firstAttribute="top" secondItem="fF2-wG-Vis" secondAttribute="bottom" constant="8" id="0yC-t7-Ycn"/>
                                         <constraint firstItem="vuG-ic-Mch" firstAttribute="trailing" secondItem="Zeh-1t-pYv" secondAttribute="trailing" id="FWc-7b-hTt"/>
